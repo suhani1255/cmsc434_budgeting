@@ -1,0 +1,11 @@
+{
+  "totalBudget": 5000,
+  "expenses": [
+    { "name": "Groceries", "amount": 200 },
+    { "name": "Internet", "amount": 50 }
+  ],
+  "goals": [
+    { "name": "Emergency Fund", "target": 1000, "current": 250 },
+    { "name": "Vacation", "target": 1500, "current": 400 }
+  ]
+}
