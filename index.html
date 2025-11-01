@@ -3,97 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Budget Tracker - Landing Page</title>
-  <link rel="stylesheet" href="styles/landing.css" />
+  <title>My Budget - Home</title>
+  <link rel="stylesheet" href="styles/app.css" />
 </head>
+
 <body>
-  <header>
-    <h1>My Budget Tracker</h1>
-    <nav>
-      <button id="btnAddGoal">Add Goal</button>
-      <button id="btnAddExpense">Add Expense</button>
-      <button id="btnSummary">View Summary</button>
+  <div id="app-frame">
+    <header>
+      <h1>My Budget</h1>
+      <span id="userIcon">👤</span>
+    </header>
+
+    <main>
+      <section class="balance-card">
+        <h2>Balance</h2>
+        <p id="totalBalance">$4750</p>
+        <p>
+          <span class="income">+ Income: $5000</span>
+          <span class="expense">− Spent: $250</span>
+        </p>
+        <div class="progress-container">
+          <div class="progress-bar" id="budgetProgress" style="width:10%;"></div>
+        </div>
+      </section>
+
+      <section class="quick-actions">
+        <button id="btnAddExpense" onclick="window.location='expenses.html'">➕ Add Expense</button>
+        <button id="btnAddGoal" onclick="window.location='goals.html'">🎯 Add Goal</button>
+      </section>
+
+      <section class="goals">
+        <h2>My Goals</h2>
+        <ul id="goalList">
+          <li><strong>Emergency Fund</strong><br>
+            <progress value="250" max="1000"></progress>
+            <p>25.0% of $1000</p></li>
+          <li><strong>Vacation</strong><br>
+            <progress value="400" max="1500"></progress>
+            <p>26.7% of $1500</p></li>
+        </ul>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="active">🏠</a>
+      <a href="expenses.html">💰</a>
+      <a href="goals.html">🎯</a>
+      <a href="summary.html">📊</a>
+      <a href="settings.html">⚙️</a>
     </nav>
-  </header>
-
-  <main>
-    <section class="overview">
-      <h2>Overview</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Total Budget</h3>
-          <p id="totalBudget">$0</p>
-        </div>
-        <div class="card">
-          <h3>Total Spent</h3>
-          <p id="totalSpent">$0</p>
-        </div>
-        <div class="card">
-          <h3>Remaining</h3>
-          <p id="remaining">$0</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="goals">
-      <h2>My Goals</h2>
-      <ul id="goalList"></ul>
-    </section>
-
-    <section class="expenses">
-      <h2>My Expenses</h2>
-      <ul id="expenseList"></ul>
-    </section>
-  </main>
-
-  <!-- GOAL MODAL -->
-  <div id="goalModal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Add New Goal</h3>
-      <label>Goal Name:</label>
-      <input id="goalName" type="text" placeholder="e.g. Vacation Fund" />
-      <label>Target Amount:</label>
-      <input id="goalTarget" type="number" placeholder="e.g. 2000" />
-      <label>Current Amount:</label>
-      <input id="goalCurrent" type="number" placeholder="e.g. 100" />
-      <div class="modal-buttons">
-        <button id="saveGoal">Save</button>
-        <button id="cancelGoal">Cancel</button>
-      </div>
-    </div>
   </div>
-
-  <!-- EXPENSE MODAL -->
-  <div id="expenseModal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Add Expense</h3>
-      <label>Expense Name:</label>
-      <input id="expenseName" type="text" placeholder="e.g. Groceries" />
-      <label>Amount:</label>
-      <input id="expenseAmount" type="number" placeholder="e.g. 100" />
-      <div class="modal-buttons">
-        <button id="saveExpense">Save</button>
-        <button id="cancelExpense">Cancel</button>
-      </div>
-    </div>
-  </div>
-
-    <!-- SUMMARY MODAL -->
-  <div id="summaryModal" class="modal hidden">
-    <div class="modal-content">
-      <h3>Spending Summary</h3>
-      <div id="summaryContent"></div>
-      <div class="modal-buttons">
-        <button id="closeSummary">Close</button>
-      </div>
-    </div>
-  </div>
-
-
-  <footer>
-    <p>2025 Budgeting App | Team 0201-06</p>
-  </footer>
-
-  <script src="scripts/landing.js"></script>
+  <script src="scripts/app.js"></script>
 </body>
 </html>

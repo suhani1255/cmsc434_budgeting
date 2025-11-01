@@ -1,0 +1,126 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #222;
+  font-family: "Segoe UI", Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app-frame {
+  width: 640px;
+  height: 960px;
+  background: #f7f7f7;
+  border-radius: 30px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+header {
+  background: #0072B2;
+  color: white;
+  text-align: center;
+  padding: 0.8em;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 { margin: 0 auto; }
+#userIcon { font-size: 1.5rem; margin-right: 0.5em; }
+
+main {
+  flex: 1;
+  padding: 1em;
+  overflow-y: auto;
+  padding-bottom: 80px;
+}
+
+.balance-card {
+  background: white;
+  margin: 1em auto;
+  border-radius: 15px;
+  width: 90%;
+  padding: 1em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.balance-card h2 { color: #0072B2; margin-bottom: 0.2em; }
+.balance-card p { font-size: 1.8rem; font-weight: bold; margin: 0.2em 0; }
+.income { color: #009E73; }
+.expense { color: #D55E00; }
+
+.progress-container {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 12px;
+  width: 100%;
+  margin-top: 0.5em;
+}
+.progress-bar {
+  background: #009E73;
+  height: 12px;
+  border-radius: 10px;
+  transition: width 0.4s;
+}
+
+.quick-actions {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1em 0;
+}
+.quick-actions button {
+  background: #E69F00;
+  border: none;
+  color: white;
+  padding: 0.8em 1.2em;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.goals h2 {
+  color: #0072B2;
+  border-left: 4px solid #0072B2;
+  padding-left: 0.4em;
+}
+.goals ul {
+  list-style: none;
+  padding: 0;
+}
+.goals li {
+  background: white;
+  border-left: 5px solid #0072B2;
+  border-radius: 10px;
+  margin: 0.4em 0;
+  padding: 0.8em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.bottom-nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background: #0072B2;
+  padding: 0.6em 0;
+  border-top: 2px solid #005F90;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.bottom-nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.bottom-nav a.active {
+  color: #E69F00;
+}
