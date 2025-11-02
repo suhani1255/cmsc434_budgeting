@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Settings</title>
-  <link rel="stylesheet" href="styles/app.css">
-</head>
-<body>
-  <div id="app-frame">
-    <header><h1>Settings</h1></header>
-    <main><p>Settings feature coming soon...</p></main>
-    <nav class="bottom-nav">
-      <a href="index.html">🏠</a>
-      <a href="expenses.html">💰</a>
-      <a href="goals.html">🎯</a>
-      <a href="summary.html">📊</a>
-      <a href="settings.html" class="active">⚙️</a>
-    </nav>
-  </div>
-  <script src="scripts/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body id="page-settings">
+    <div id="app-frame">
+      <header><h1>Settings & Income</h1></header>
+      <main>
+        <section class="card">
+          <h2>Add Income</h2>
+          <form id="incomeForm" class="data-form">
+            <label>Source Name</label>
+            <input id="incomeName" placeholder="e.g., Paycheck" required />
+            <label>Amount ($)</label>
+            <input
+              id="incomeAmt"
+              type="number"
+              min="0.01"
+              step="0.01"
+              required
+            />
+            <label>Date</label>
+            <input id="incomeDate" type="date" required />
+            <button type="submit">Save Income</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>App Settings</h2>
+          <form id="settingsForm" class="data-form">
+            <label>Low-Balance Alert Threshold ($)</label>
+            <input id="alertThreshold" type="number" min="0" step="1" />
+            <button type="submit">Save Settings</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>Data Management</h2>
+          <button id="resetDataButton" class="danger-btn">
+            Reset All App Data
+          </button>
+        </section>
+      </main>
+      <nav class="bottom-nav">
+        <a href="index.html">🏠</a>
+        <a href="expenses.html">💰</a>
+        <a href="goals.html">🎯</a>
+        <a href="summary.html">📊</a>
+        <a href="settings.html" class="active">⚙️</a>
+      </nav>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>

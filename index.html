@@ -1,58 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Budget - Home</title>
-  <link rel="stylesheet" href="styles/app.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Dashboard</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body id="page-index">
+    <div id="app-frame">
+      <header><h1>Dashboard</h1></header>
 
-<body>
-  <div id="app-frame">
-    <header>
-      <h1>My Budget</h1>
-      <span id="userIcon">👤</span>
-    </header>
+      <main>
+        <section class="balance-card">
+          <h2>Current Balance</h2>
+          <p id="currentBalance" class="balance-amount">$0.00</p>
+          <p id="incomeTotal" class="income">+ Income: $0.00</p>
+          <p id="expenseTotal" class="expense">− Spent: $0.00</p>
+        </section>
 
-    <main>
-      <section class="balance-card">
-        <h2>Balance</h2>
-        <p id="totalBalance">$4750</p>
-        <p>
-          <span class="income">+ Income: $5000</span>
-          <span class="expense">− Spent: $250</span>
-        </p>
-        <div class="progress-container">
-          <div class="progress-bar" id="budgetProgress" style="width:10%;"></div>
-        </div>
-      </section>
+        <section id="balanceAlert" class="alert hidden">
+          </section>
 
-      <section class="quick-actions">
-        <button id="btnAddExpense" onclick="window.location='expenses.html'">➕ Add Expense</button>
-        <button id="btnAddGoal" onclick="window.location='goals.html'">🎯 Add Goal</button>
-      </section>
+        <section class="card">
+          <h2>Recent Expenses</h2>
+          <ul id="recentExpensesList" class="simple-list">
+            <li>Loading...</li>
+          </ul>
+        </section>
 
-      <section class="goals">
-        <h2>My Goals</h2>
-        <ul id="goalList">
-          <li><strong>Emergency Fund</strong><br>
-            <progress value="250" max="1000"></progress>
-            <p>25.0% of $1000</p></li>
-          <li><strong>Vacation</strong><br>
-            <progress value="400" max="1500"></progress>
-            <p>26.7% of $1500</p></li>
-        </ul>
-      </section>
-    </main>
+        <section class="card">
+          <h2>Goal Progress</h2>
+          <ul id="goalProgressList" class="progress-list">
+            <li>Loading...</li>
+          </ul>
+        </section>
+      </main>
 
-    <nav class="bottom-nav">
-      <a href="index.html" class="active">🏠</a>
-      <a href="expenses.html">💰</a>
-      <a href="goals.html">🎯</a>
-      <a href="summary.html">📊</a>
-      <a href="settings.html">⚙️</a>
-    </nav>
-  </div>
-  <script src="scripts/app.js"></script>
-</body>
+      <nav class="bottom-nav">
+        <a href="index.html" class="active">🏠</a>
+        <a href="expenses.html">💰</a>
+        <a href="goals.html">🎯</a>
+        <a href="summary.html">📊</a>
+        <a href="settings.html">⚙️</a>
+      </nav>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>

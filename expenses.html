@@ -1,26 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expenses</title>
-  <link rel="stylesheet" href="styles/app.css">
-</head>
-<body>
-  <div id="app-frame">
-    <header><h1>My Expenses</h1></header>
-    <main>
-      <ul id="expenseList"></ul>
-      <button id="addExpense">Add Expense</button>
-    </main>
-    <nav class="bottom-nav">
-      <a href="index.html">🏠</a>
-      <a href="expenses.html" class="active">💰</a>
-      <a href="goals.html">🎯</a>
-      <a href="summary.html">📊</a>
-      <a href="settings.html">⚙️</a>
-    </nav>
-  </div>
-  <script src="scripts/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expenses</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body id="page-expenses">
+    <div id="app-frame">
+      <header><h1>Expenses</h1></header>
+      <main>
+        <section class="card">
+          <h2>Add Expense</h2>
+          <form id="expenseForm" class="data-form">
+            <label>Name</label>
+            <input id="expName" placeholder="e.g., Coffee" required />
+            <label>Amount ($)</label>
+            <input
+              id="expAmt"
+              type="number"
+              min="0.01"
+              step="0.01"
+              required
+            />
+            <label>Category</label>
+            <select id="expCat">
+              <option>Food</option>
+              <option>Transport</option>
+              <option>Utilities</option>
+              <option>Rent</option>
+              <option>Entertainment</option>
+              <option>Goal Contribution</option>
+              <option>Other</option>
+            </select>
+            <label>Date</label>
+            <input id="expDate" type="date" required />
+            <label>Source (Optional)</label>
+            <input id="expSrc" placeholder="e.g., Credit Card" />
+            <button type="submit">Save Expense</button>
+          </form>
+        </section>
+
+        <section class="card">
+          <h2>All Expenses</h2>
+          <ul id="allExpensesList" class="transaction-list">
+            <li>Loading...</li>
+          </ul>
+        </section>
+      </main>
+      <nav class="bottom-nav">
+        <a href="index.html">🏠</a>
+        <a href="expenses.html" class="active">💰</a>
+        <a href="goals.html">🎯</a>
+        <a href="summary.html">📊</a>
+        <a href="settings.html">⚙️</a>
+      </nav>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>

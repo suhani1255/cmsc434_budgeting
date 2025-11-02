@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summary</title>
-  <link rel="stylesheet" href="styles/app.css">
-</head>
-<body>
-  <div id="app-frame">
-    <header><h1>Spending Summary</h1></header>
-    <main id="summaryContent"></main>
-    <nav class="bottom-nav">
-      <a href="index.html">🏠</a>
-      <a href="expenses.html">💰</a>
-      <a href="goals.html">🎯</a>
-      <a href="summary.html" class="active">📊</a>
-      <a href="settings.html">⚙️</a>
-    </nav>
-  </div>
-  <script src="scripts/app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary</title>
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body id="page-summary">
+    <div id="app-frame">
+      <header><h1>Spending Summary</h1></header>
+      <main>
+        <section class="card">
+          <h2>Spending by Category</h2>
+          <ul id="categorySummaryList" class="summary-list">
+            <li>Loading...</li>
+          </ul>
+        </section>
+      </main>
+      <nav class="bottom-nav">
+        <a href="index.html">🏠</a>
+        <a href="expenses.html">💰</a>
+        <a href="goals.html">🎯</a>
+        <a href="summary.html" class="active">📊</a>
+        <a href="settings.html">⚙️</a>
+      </nav>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
 </html>
